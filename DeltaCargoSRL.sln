@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaCargoSRL", "DeltaCargoSRL.csproj", "{6AC0B418-4C6C-401E-90F5-829F0ECA7F18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AC0B418-4C6C-401E-90F5-829F0ECA7F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC0B418-4C6C-401E-90F5-829F0ECA7F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC0B418-4C6C-401E-90F5-829F0ECA7F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC0B418-4C6C-401E-90F5-829F0ECA7F18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3B67F96-AEFB-4935-964A-ED8BF076705F}
+	EndGlobalSection
+EndGlobal
