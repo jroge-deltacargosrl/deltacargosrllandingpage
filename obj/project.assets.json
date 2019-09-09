@@ -12972,11 +12972,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Source\\Repos\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
       "projectName": "DeltaCargoSRL",
-      "projectPath": "C:\\Users\\hp\\Source\\Repos\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
+      "projectPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Source\\Repos\\delta-cargo-srl-landing-page\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
