@@ -95,3 +95,4 @@ E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netc
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csproj.CopyComplete
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csprojAssemblyReference.cache
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Carrier\Details.g.cshtml.cs
+C:\Users\hp\Desktop\DeltaCargo\Delta Cargo SRL\delta-cargo-srl-landing-page\obj\Debug\netcoreapp2.2\Razor\Views\Carrier\Details.g.cshtml.cs
