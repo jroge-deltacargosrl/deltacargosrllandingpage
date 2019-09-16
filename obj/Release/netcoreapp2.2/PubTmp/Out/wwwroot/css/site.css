@@ -1,0 +1,13 @@
+﻿.button-LogIn {
+    float: right;
+    color: #ec9404;
+}
+
+.s_share_facebook,
+.s_share_twitter,
+.s_share_linkedin,
+.s_share_google,
+.s_share_email {
+    width: 20%;
+    margin: 2px;
+}

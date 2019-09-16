@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj": {}
+    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj": {
+    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
+        "projectUniqueName": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
         "projectName": "DeltaCargoSRL",
-        "projectPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\DeltaCargoSRL.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo SRL\\delta-cargo-srl-landing-page\\obj\\",
+        "projectPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -63,6 +63,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.2.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.6.10, )"
             }
           },
           "imports": [

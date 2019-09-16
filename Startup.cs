@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DeltaCargoSRL.Models;
+using DeltaCargoSRL.Models.API;
+using DeltaCargoSRL.Models.Infraestructure;
+using DeltaCargoSRL.Models.Interfaz;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,7 +37,13 @@ namespace DeltaCargoSRL
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMemoryCache();
+            services.AddSession();
+
+            // injection dependency ( modificar)
+            services.AddSingleton(typeof(IRepositoryCrud<>),typeof(RepositoryApi<>));
         }
+                    
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -48,10 +58,11 @@ namespace DeltaCargoSRL
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseStatusCodePages();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

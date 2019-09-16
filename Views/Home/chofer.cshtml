@@ -1,4 +1,5 @@
-﻿@{
+﻿@model   DeltaCargoSRL.Models.CarrierModel
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -12,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <title>Contactus_drivers | Delta Cargo SRL</title>
+    <title>Conductores | Delta Cargo SRL</title>
     <link type="image/x-icon" rel="shortcut icon" href="~/web/image/website/1/favicon/index.html" />
 
     <script type="text/javascript">
@@ -88,31 +89,17 @@
                     </button>
                     <div class="collapse navbar-collapse" id="top_menu_collapse">
                         <ul class="nav navbar-nav ml-auto text-right o_menu_loading" id="top_menu">
-
-
-
-
                             <li class="nav-item">
                                 <a role="menuitem" href="index.html" class="nav-link ">
                                     <span>Inicio</span>
                                 </a>
                             </li>
 
-
-
-
-
                             <li class="nav-item">
                                 <a role="menuitem" href="contactocliente.html" class="nav-link ">
                                     <span>Contáctanos</span>
                                 </a>
                             </li>
-
-
-
-
-
-
                             <li class="nav-item divider"></li>
                             <li class="nav-item">
                                 <a class="nav-link" href="web/login.html">
@@ -127,7 +114,7 @@
         <main>
 
             <div id="wrap" class="oe_structure oe_empty">
-                <form action="https://www.deltacargosrl.com/website_form/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="crm.lead" data-success_page="">
+                <form asp-action="Create" asp-controller="Carrier" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="crm.lead" data-success_page="">
                     <div class="container">
                         <div class="row form-group form-field o_website_form_required o_website_form_field_hidden">
                             <div class="col-md-4 text-md-right">
@@ -137,28 +124,45 @@
                                 <input type="text" class="form-control o_website_form_input" name="name" value="Soy un Transportista" required="1" readonly="true" />
                             </div>
                         </div>
+
                         <div class="row form-group form-field o_website_form_required_custom">
                             <div class="col-md-4 text-md-right" style="">
-                                <label class="col-form-label" for="contact_name"> Nombre Completo</label>
+                                <label class="col-form-label" for="nroLicense">Nro. Licencia</label>
                             </div>
                             <div class="col-md-8 col-lg-5">
-                                <input type="text" class="form-control o_website_form_input" name="contact_name" required="" />
+                                <input type="number" class="form-control o_website_form_input" asp-for="@Model.nroLicense" required />
+                            </div>
+                        </div>
+                        <div class="row form-group form-field o_website_form_required_custom">
+                            <div class="col-md-4 text-md-right" style="">
+                                <label class="col-form-label" for="fullname">Nombres</label>
+                            </div>
+                            <div class="col-md-8 col-lg-5">
+                                <input type="text" class="form-control o_website_form_input" asp-for="@Model.fullname" required />
+                            </div>
+                        </div>
+                        <div class="row form-group form-field o_website_form_required_custom">
+                            <div class="col-md-4 text-md-right" style="">
+                                <label class="col-form-label" for="lastname">Apellidos</label>
+                            </div>
+                            <div class="col-md-8 col-lg-5">
+                                <input type="text" class="form-control o_website_form_input" asp-for="@Model.lastname" required/>
                             </div>
                         </div>
                         <div class="row form-group form-field">
                             <div class="col-md-4 text-md-right">
-                                <label class="col-form-label" for="partner_name">Empresa de Transporte</label>
+                                <label class="col-form-label" for="company">Empresa de Transporte</label>
                             </div>
                             <div class="col-md-8 col-lg-5" style="">
-                                <input type="text" class="form-control o_website_form_input" name="partner_name" />
+                                <input type="text" class="form-control o_website_form_input" asp-for="@Model.company" />
                             </div>
                         </div>
                         <div class="row form-group form-field o_website_form_required_custom">
                             <div class="col-md-4 text-md-right" style="">
-                                <label class="col-form-label" for="mobile"> Celular</label>
+                                <label class="col-form-label" for="phone">Celular</label>
                             </div>
                             <div class="col-md-8 col-lg-5">
-                                <input type="text" class="form-control o_website_form_input" name="mobile" required="" />
+                                <input type="text" class="form-control o_website_form_input" asp-for="@Model.phone" required />
                             </div>
                         </div>
                         <div class="row form-group form-field o_website_form_custom o_website_form_required_custom">
@@ -168,31 +172,32 @@
                                 </label>
                             </div>
                             <div class="col-md-8 col-lg-5">
-                                <select class="form-control o_website_form_input" name="Tipo de Camión" required="false">
-                                    <option value="Camión Abierto">
-                                        Camión Abierto
-                                    </option>
-                                    <option value="Saider">
-                                        Saider
-                                    </option>
-                                    <option value="Furgón">
-                                        Furgón
-                                    </option>
-                                    <option value="Refrigerado">
-                                        Refrigerado
-                                    </option>
-                                    <option value="Bau">
-                                        Bau
-                                    </option>
-                                    <option value="Trucky">
-                                        Trucky
-                                    </option>
-                                    <option value="Nissan Condor o similar">
-                                        Nissan Condor o similar
-                                    </option>
-                                    <option value="Otros">
-                                        Otros
-                                    </option>
+                                <select class="form-control o_website_form_input" asp-items="@(new SelectList((List<TruckTypeModel>)ViewData["truckTypes"], "id", "tipo"))" 
+                                        asp-for="@Model.id_truckType" required>
+                                    @*<option value="Camión Abierto">
+                                            Camión Abierto
+                                        </option>
+                                        <option value="Saider">
+                                            Saider
+                                        </option>
+                                        <option value="Furgón">
+                                            Furgón
+                                        </option>
+                                        <option value="Refrigerado">
+                                            Refrigerado
+                                        </option>
+                                        <option value="Bau">
+                                            Bau
+                                        </option>
+                                        <option value="Trucky">
+                                            Trucky
+                                        </option>
+                                        <option value="Nissan Condor o similar">
+                                            Nissan Condor o similar
+                                        </option>
+                                        <option value="Otros">
+                                            Otros
+                                        </option>*@
                                 </select>
                             </div>
                         </div>
@@ -200,17 +205,56 @@
                             <div class="col-md-4 text-md-right">
                                 <label class="col-form-label" for="Rutas Transitadas">Rutas Transitadas&nbsp;</label>
                             </div>
-                            <div class="col-lg-2 col-md-8"><input type="checkbox" value="Brasil" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Brasil</div>
-                            <div class="col-md-8 col-lg-2"><input type="checkbox" value="Chile" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Chile</div>
-                            <div class="col-md-8 col-lg-2"><input type="checkbox" value="Argentina" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Argentina</div>
-                            <div class="col-lg-2 col-md-8 offset-lg-4"><input type="checkbox" value="Perú" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Perú</div>
-                            <div class="col-lg-2 col-md-8 pb0"><input type="checkbox" value="Paraguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Paraguay</div>
-                            <div class="col-md-8 pb0 col-lg-3"><input type="checkbox" value="Uruguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Uruguay</div>
-                            <div class="col-lg-2 col-md-8 offset-lg-4 pb0 pt8"><input type="checkbox" value="Uruguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Ruta Nacional</div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    @{
+                                        // formar dos columnas con las rutas macro de paises
+                                        int index = 0;
+                                        //List<RouteModel> routesMacro = ((List<RouteModel>)ViewData["routes"]);
+                                        int middle = Model.ids_Route.Count() / 2;
+                                        <div class="col-md-3">
+                                            @for (int i = 0; i <= middle; i++)
+                                            {
+                                            <div class="custom-control custom-checkbox col-2">
+                                                <input id="@Model.ids_Route[i].id" type="checkbox" asp-for="@Model.ids_Route[i].marcado" class="custom-control-input" />
+                                                <label class="custom-control-label" for="@Model.ids_Route[i].id"> @Model.ids_Route[i].pais</label>
+                                                <input type="hidden" asp-for="@Model.ids_Route[i].id" />
+                                                <input type="hidden" asp-for="@Model.ids_Route[i].pais" />
+                                            </div>
+                                                <br />
+                                            }
+                                        </div>
+                                        <div class="col-md-3">
+                                            @for (int i = middle+1; i < Model.ids_Route.Count(); i++)
+                                            {
+                                            <div class="custom-control custom-checkbox col-2">
+                                                <input id="@Model.ids_Route[i].id" type="checkbox" asp-for="@Model.ids_Route[i].marcado" class="custom-control-input" />
+                                                <label class="custom-control-label text-nowrap" for="@Model.ids_Route[i].id"> @Model.ids_Route[i].pais</label>
+                                                <input type="hidden" asp-for="@Model.ids_Route[i].id" />
+                                                <input type="hidden" asp-for="@Model.ids_Route[i].pais" />
+                                            </div>
+                                                <br />
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            @*@<div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                            </div>*@
+
+                            @*@<div class="col-lg-2 col-md-8"><input type="checkbox" value="Brasil" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Brasil</div>
+                                <div class="col-md-8 col-lg-2"><input type="checkbox" value="Chile" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Chile</div>
+                                <div class="col-md-8 col-lg-2"><input type="checkbox" value="Argentina" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Argentina</div>
+                                <div class="col-lg-2 col-md-8 offset-lg-4"><input type="checkbox" value="Perú" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Perú</div>
+                                <div class="col-lg-2 col-md-8 pb0"><input type="checkbox" value="Paraguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Paraguay</div>
+                                <div class="col-md-8 pb0 col-lg-3"><input type="checkbox" value="Uruguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Uruguay</div>
+                                <div class="col-lg-2 col-md-8 offset-lg-4 pb0 pt8"><input type="checkbox" value="Uruguay" class="o_website_form_input" name="Rutas Transitadas" required="" />&nbsp;Ruta Nacional</div>*@
                         </div>
                         <div class="form-group row">
                             <div class="offset-md-4 col-md-8 col-lg-6 offset-lg-4">
-                                <button class="btn btn-primary btn-lg o_website_form_send" data-original-title="" title="" aria-describedby="tooltip439459">Enviar</button>
+                                <button class="btn btn-primary o_website_form_send" data-original-title="" title="" aria-describedby="tooltip439459">Enviar Cotizacion</button>
                                 <span id="o_website_form_result" class="text-danger ml8"></span>
                             </div>
                         </div>

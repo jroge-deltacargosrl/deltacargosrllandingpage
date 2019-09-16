@@ -1,0 +1,65 @@
+﻿@model DeltaCargoSRL.Models.CarrierModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalle</h1>
+
+<div>
+    <h4>Tus Datos Fueron Registados</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nroLicense)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nroLicense)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fullname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fullname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.lastname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.lastname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.company)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.company)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+        <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.id_truckType)
+            </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ids_Route)
+            </dd>
+    </dl>
+    @{
+        <ul>
+            @foreach (var routes in Model.ids_Route)
+            {
+                <li>
+                    @routes.pais
+                </li>
+            }
+        </ul>
+
+    }
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

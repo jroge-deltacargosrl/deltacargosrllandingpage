@@ -54,22 +54,54 @@
     <link type="text/css" rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div id="wrapwrap" class="homepage" style="background-color:white;">
+
+    @{
+        DeltaCargoSRL.Utils.UtilsApp.initVarEnviroment("developing");
+    }
+    <div id="wrapwrap" class="homepage">
         <header class=" o_affix_enabled">
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container">
-                    <a href="index.html" class="navbar-brand logo">
-                        <span role="img" aria-label="Logo of Delta Cargo SRL" title="Delta Cargo SRL"><img src="~/web/image/res.company/1/logo4c70.png?unique=ab3e1b3" class="img img-fluid" /></span>
+                    <a href="@Url.Action("Index","Home")" class="navbar-brand logo">
+                        <span role="img" aria-label="Logo of Delta Cargo SRL" title="Delta Cargo SRL">
+                            <img src="~/web/image/res.company/1/logo4c70.png?unique=ab3e1b3" class="img img-fluid" />
+                        </span>
                     </a>
-                    <a class="button-LogIng" href="http://deltacargoportal.azurewebsites.net"><b>Iniciar sesión</b></a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#top_menu_collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="top_menu_collapse">
+                        <ul class="nav navbar-nav ml-auto text-right " id="top_menu">
+                            <li class="nav-item">
+                                <a role="menuitem" class="nav-link active" href="@Url.Action("Index","Home")">
+                                    <span class="">Inicio</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a role="menuitem" class="nav-link" href="@Url.Action("Cliente","Home")">
+                                    <span class="">Contáctanos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item divider" ></li>
+                            <li class="nav-item">
+                                <a role="menuitem" class="nav-link" href="http://deltacargoportal.azurewebsites.net" target="_blank">
+                                    <span class="">
+                                        <b>Iniciar sesión</b>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
                 </div>
             </nav>
         </header>
         <main>
             <div id="wrap" class="oe_structure oe_empty">
                 <section class="s_cover parallax pb256 pt0 bg-black-50 s_parallax_is_fixed" data-scroll-background-ratio="1" style="background-image:none;">
-                    <span class="s_parallax_bg oe_img_bg oe_custom_bg imagen"style="background-image: url(../image/DeltaCargo-408.jpg); background-position: 14.32% 80.35%;">
-                    </span> 
+                    <span class="s_parallax_bg oe_img_bg oe_custom_bg imagen" style="background-image: url(../image/DeltaCargo-408.jpg); background-position: 14.32% 80.35%;">
+                    </span>
                     <div class="container">
                         <div class="row s_nb_column_fixed">
                             <div class="col-lg-12 s_text pb8 pt176" data-name="Text" style="">
@@ -80,8 +112,8 @@
                                     <br />
                                 </p>
                                 <div class="col-lg-12 pb16 pt0 s_btn text-center" data-name="Buttons">
-                                    <a href="/Home/Chofer" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
-                                    <a href="/Home/Cliente" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>
+                                    <a href="@Url.Action("Chofer","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
+                                    <a href="@Url.Action("Cliente","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +167,7 @@
                             <div class="pt16 col-lg-4" id="connect" style="">
                                 <h5>
                                     <font class="text-alpha" style="font-size: 18px;">
-                                        <a href="contactocliente.html" data-original-title="" title="">Contáctanos</a>
+                                        <a href="@Url.Action("Cliente","Home")" data-original-title="" title="">Contáctanos</a>
                                     </font>
                                 </h5>
                                 <ol class="list-unstyled">
@@ -164,7 +196,7 @@
                                     </li>
                                     <li>
                                         @{
-                                        string x = "@";
+                                            string x = "@";
                                         }
                                         <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@x-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
                                             <font style="font-size: 12px;">&nbsp;&nbsp; &nbsp;</font>
@@ -216,5 +248,7 @@
         </footer>
     </div>
     <script data-cfasync="false" src="~/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
+
 </body>
 </html>

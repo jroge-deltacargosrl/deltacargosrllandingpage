@@ -62,3 +62,36 @@ C:\Users\hp\Source\Repos\delta-cargo-srl-landing-page\obj\Debug\netcoreapp2.2\De
 C:\Users\hp\Source\Repos\delta-cargo-srl-landing-page\obj\Debug\netcoreapp2.2\DeltaCargoSRL.dll
 C:\Users\hp\Source\Repos\delta-cargo-srl-landing-page\obj\Debug\netcoreapp2.2\DeltaCargoSRL.pdb
 C:\Users\hp\Source\Repos\delta-cargo-srl-landing-page\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csproj.CopyComplete
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.deps.json
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.runtimeconfig.json
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.runtimeconfig.dev.json
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.dll
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.pdb
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.Views.dll
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\bin\Debug\netcoreapp2.2\DeltaCargoSRL.Views.pdb
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csproj.CoreCompileInputs.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.RazorAssemblyInfo.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.RazorAssemblyInfo.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.AssemblyInfoInputs.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.AssemblyInfo.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.TagHelpers.input.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.TagHelpers.output.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.RazorCoreGenerate.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Home\chofer.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Home\cliente.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.RazorTargetAssemblyInfo.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.RazorTargetAssemblyInfo.cs
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.Views.pdb
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.dll
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.pdb
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csproj.CopyComplete
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\DeltaCargoSRL.csprojAssemblyReference.cache
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaCargoSRL\obj\Debug\netcoreapp2.2\Razor\Views\Carrier\Details.g.cshtml.cs
