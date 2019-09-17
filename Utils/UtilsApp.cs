@@ -19,9 +19,10 @@ namespace DeltaCargoSRL.Utils
                     URL_BASE = "https://localhost:44333/api/v1/";
                     break;
                 case "local production":
-                    URL_BASE = "";
+                    //URL_BASE = "http://deltacargoapi.azurewebsites.net/api/v1";
                     break;
                 case "cloud production":
+                    URL_BASE = "http://deltacargoapi.azurewebsites.net/api/v1";
                     break;
             }
         }
