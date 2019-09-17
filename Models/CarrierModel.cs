@@ -24,7 +24,7 @@ namespace DeltaCargoSRL.Models
         [HiddenInput(DisplayValue = false)]
         public int id_truckType { get; set; } // FK -> Tipo Camion
         //[HiddenInput(DisplayValue = false)]
-        public List<RouteModel> ids_Route { get; set; } // 
+        public List<MacroRouteModel> ids_Route { get; set; } // 
 
 
 

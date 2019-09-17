@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace DeltaCargoSRL.Models
 {
-    public class RouteModel
+    public class MacroRouteModel
     {
         public int id { get; set; }
-        public string pais { get; set; }
-        public string descripcion { get; set; } = "";
-        public bool marcado { get; set; }
+        public string name { get; set; }
+        public string description { get; set; } = "";
+        public bool marked { get; set; }
 
     }
 }

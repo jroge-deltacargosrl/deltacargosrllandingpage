@@ -106,7 +106,6 @@ namespace DeltaCargoSRL.Models.Infraestructure
             }
         }
 
-
         public static T deserilizeProject<T>(string content) => JsonConvert.DeserializeObject<T>(content);
 
         public static string serializeObject<T>(T value) => JsonConvert.SerializeObject(value);

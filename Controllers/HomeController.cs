@@ -14,10 +14,10 @@ namespace DeltaCargoSRL.Controllers
     {
 
         private readonly IRepositoryCrud<TruckTypeModel> repositoryTruck;
-        private readonly IRepositoryCrud<RouteModel> repositoryRoute;
+        private readonly IRepositoryCrud<MacroRouteModel> repositoryRoute;
 
         public HomeController(IRepositoryCrud<TruckTypeModel> repositoryTruck
-            ,IRepositoryCrud<RouteModel> repositoryRoute)
+            ,IRepositoryCrud<MacroRouteModel> repositoryRoute)
         {
             this.repositoryTruck = repositoryTruck;
             this.repositoryRoute = repositoryRoute;
