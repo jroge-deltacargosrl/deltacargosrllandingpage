@@ -8,7 +8,7 @@ namespace DeltaCargoSRL.Models
     public class QuotationViewModel
     {
         public List<ServiceTypeModel> serviceTypes { get; set; }
-        public List<RouteModel> macroRoutes { get; set; }
+        public List<MacroRouteModel> macroRoutes { get; set; }
         public List<TruckTypeModel> trucksTypes { get; set; }
     }
 }

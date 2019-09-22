@@ -23,6 +23,8 @@ namespace DeltaCargoSRL.Models
         public string phone { get; set; }
         [HiddenInput(DisplayValue = false)]
         public int id_truckType { get; set; } // FK -> Tipo Camion
+        public int id_membership { get; set; }
+
         //[HiddenInput(DisplayValue = false)]
         public List<MacroRouteModel> ids_Route { get; set; } // 
 
