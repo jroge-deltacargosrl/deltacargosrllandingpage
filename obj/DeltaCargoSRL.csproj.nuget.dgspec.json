@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {}
+    "E:\\Documentacion Trabajo Profesional\\Delta Cargo\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {}
   },
   "projects": {
-    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {
+    "E:\\Documentacion Trabajo Profesional\\Delta Cargo\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
+        "projectUniqueName": "E:\\Documentacion Trabajo Profesional\\Delta Cargo\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
         "projectName": "DeltaCargoSRL",
-        "projectPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
+        "projectPath": "E:\\Documentacion Trabajo Profesional\\Delta Cargo\\Implementacion\\DeltaCargoSRL\\DeltaCargoSRL.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaCargoSRL\\obj\\",
+        "outputPath": "E:\\Documentacion Trabajo Profesional\\Delta Cargo\\Implementacion\\DeltaCargoSRL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -62,7 +62,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[2.2.4, )"
             },
             "RestSharp": {
               "target": "Package",
@@ -70,10 +70,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

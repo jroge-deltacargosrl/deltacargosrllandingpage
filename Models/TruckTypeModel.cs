@@ -8,8 +8,8 @@ namespace DeltaCargoSRL.Models
     public class TruckTypeModel
     {
         public int id { get; set; }
-        public string tipo { get; set; }
-        public string descripcion { get; set; }
+        public string type { get; set; }
+        public string description { get; set; }
 
     }
 }

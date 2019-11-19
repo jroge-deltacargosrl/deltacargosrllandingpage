@@ -56,7 +56,7 @@
 <body>
 
     @{
-        DeltaCargoSRL.Utils.UtilsApp.initVarEnviroment("developing");
+        
     }
     <div id="wrapwrap" class="homepage">
         <header class=" o_affix_enabled">
@@ -78,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a role="menuitem" class="nav-link" href="@Url.Action("Cliente","Home")">
+                                <a role="menuitem" class="nav-link" href="@Url.Action("Create","Client")">
                                     <span class="">Contáctanos</span>
                                 </a>
                             </li>
@@ -112,8 +112,11 @@
                                     <br />
                                 </p>
                                 <div class="col-lg-12 pb16 pt0 s_btn text-center" data-name="Buttons">
-                                    <a href="@Url.Action("Chofer","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
-                                    <a href="@Url.Action("Cliente","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>
+                                    @*<a href="@Url.Action("Chofer","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
+        <a href="@Url.Action("Cliente","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>*@
+                                    <a href="@Url.Action("Create","Carrier")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
+                                    <a href="@Url.Action("Create","Client")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>
+
                                 </div>
                             </div>
                         </div>
@@ -167,7 +170,7 @@
                             <div class="pt16 col-lg-4" id="connect" style="">
                                 <h5>
                                     <font class="text-alpha" style="font-size: 18px;">
-                                        <a href="@Url.Action("Cliente","Home")" data-original-title="" title="">Contáctanos</a>
+                                        <a href="@Url.Action("Create","Client")" data-original-title="" title="">Contáctanos</a>
                                     </font>
                                 </h5>
                                 <ol class="list-unstyled">
@@ -195,15 +198,13 @@
                                         <font style="font-size: 12px;">&nbsp; &nbsp;Calle Teniente Walter Vega #360, Santa Cruz, Bolivia</font>
                                     </li>
                                     <li>
-                                        @{
-                                            string x = "@";
-                                        }
-                                        <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@x-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
+                                      
+                                        <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@@-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
                                             <font style="font-size: 12px;">&nbsp;&nbsp; &nbsp;</font>
                                         </a>
                                         <font class="text-alpha" style="font-size: 12px;">
                                             <u>
-                                                <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@x-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip345366" target="_blank">Google Maps</a>
+                                                <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@@-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip345366" target="_blank">Google Maps</a>
                                             </u>
                                         </font>
                                         <br />

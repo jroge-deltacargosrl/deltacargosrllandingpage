@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DeltaCargoSRL.Models;
 using DeltaCargoSRL.Models.API;
-using DeltaCargoSRL.Models.Infraestructure;
 using DeltaCargoSRL.Models.Interfaz;
+using DeltaCargoSRL.Models.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,7 +31,7 @@ namespace DeltaCargoSRL
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
@@ -41,13 +41,15 @@ namespace DeltaCargoSRL
             services.AddSession();
 
             // injection dependency ( modificar)
-            services.AddSingleton(typeof(IRepositoryCrud<>),typeof(RepositoryApi<>));
+            services.AddSingleton(typeof(IRepositoryApi<>),typeof(RepositoryApi<>));
+            services.AddSingleton<RequestAPI>(); 
         }
                     
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

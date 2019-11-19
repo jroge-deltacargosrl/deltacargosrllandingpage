@@ -44,13 +44,15 @@
                 @Html.DisplayNameFor(model => model.id_truckType)
             </dt>
         <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.ids_Route)
+            <b>Rutas Transitadas</b>
+                @*@Html.DisplayFor(model => model.ids_Route)*@
             </dd>
     </dl>
     @{
         <ul>
             @foreach (var routes in Model.ids_Route)
             {
+                // ver la forma de mostrar en una tabla los resultados
                 <li>
                     @routes.name
                 </li>

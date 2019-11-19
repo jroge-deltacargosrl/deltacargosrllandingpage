@@ -1,7 +1,10 @@
 ﻿@{
     Layout = null;
 }
-@model DeltaCargoSRL.Models.QuotationViewModel;
+@using DeltaCargoSRL.Models.ViewModels;
+@model QuotationViewModel
+
+
 <!DOCTYPE html>
 <html lang="es-ES" data-website-id="1" data-oe-company-name="Delta Cargo SRL">
 <!-- Mirrored from www.deltacargosrl.com/contactocliente by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Sep 2019 20:54:19 GMT -->
@@ -62,7 +65,7 @@
         <header class=" o_affix_enabled">
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container">
-                    <a href="@Url.Action(" Index", "Home" )" class="navbar-brand logo">
+                    <a href="@Url.Action("Index", "Home" )" class="navbar-brand logo">
                         <span role="img" aria-label="Logo of Delta Cargo SRL" title="Delta Cargo SRL"><img src="~/web/image/res.company/1/logo4c70.png?unique=ab3e1b3" class="img img-fluid" /></span>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#top_menu_collapse">
@@ -71,12 +74,12 @@
                     <div class="collapse navbar-collapse" id="top_menu_collapse">
                         <ul class="nav navbar-nav ml-auto text-right o_menu_loading" id="top_menu">
                             <li class="nav-item">
-                                <a role="menuitem" href="@Url.Action(" Index", "Home" )" class="nav-link ">
+                                <a role="menuitem" href="@Url.Action("Index", "Home" )" class="nav-link ">
                                     <span>Inicio</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a role="menuitem" href="@Url.Action(" Cliente","Home")" class="nav-link active">
+                                <a role="menuitem" href="@Url.Action("Index","Client")" class="nav-link active">
                                     <span>Contáctanos</span>
                                 </a>
                             </li>
@@ -93,7 +96,7 @@
         </header>
         <main>
             <div id="wrap" class="oe_structure oe_empty">
-                <form action="https://www.deltacargosrl.com/website_form/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="crm.lead" data-success_page="">
+                <form  asp-action="" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="crm.lead" data-success_page="">
                     <div class="container">
                         <div class="row form-group form-field">
                             <div class="col-md-4 text-md-right">
@@ -132,8 +135,8 @@
                                 <label class="col-form-label">Servicio</label>
                             </div>
                             <div class="col-md-8 col-lg-5">
-                                <select id="servicesSelect" class="form-control">
-                                    @foreach (ServiceTypeModel serviceType in Model.serviceTypes)
+                                <select id="servicesSelect" class="form-control" asp-items="@(new SelectList(Model.serviceTypes,"id","name"))" required>
+                                    @*@foreach (ServiceTypeModel serviceType in Model.serviceTypes)
                                     {
                                         @if (serviceType.id == 4)
                                         {
@@ -143,7 +146,7 @@
                                         {
                                             <option value="@serviceType.id">@serviceType.name</option>
                                         }
-                                    }
+                                    }*@
                                 </select>
                             </div>
                         </div>
@@ -158,9 +161,9 @@
                                             <input class="form-control" type="text" value="" />
                                         </div>
                                         <div style="width:25%;">
-                                            <select class="form-control">
-                                                <option value="m2">m2</option>
-                                                <option value="m3">m3</option>
+                                            <select class="form-control" asp-items="@(new SelectList(Model.umsStorageCapacity,"id","abbreviation"))" >
+                                                @*<option value="m2">m2</option>
+                                                <option value="m3">m3</option>*@
                                             </select>
                                         </div>
                                     </div>
@@ -174,10 +177,10 @@
                                             <input type="text" class="form-control o_website_form_input" />
                                         </div>
                                         <div style="width:35%;">
-                                            <select class="form-control o_website_form_input">
-                                                <option value="week">Semana(s)</option>
+                                            <select class="form-control" asp-items="@(new SelectList(Model.umsStorageTime,"id","abbreviation"))">
+                                                @*<option value="week">Semana(s)</option>
                                                 <option value="month">Mes(es)</option>
-                                                <option value="year">Año(s)</option>
+                                                <option value="year">Año(s)</option>*@
                                             </select>
                                         </div>
                                     </div>
@@ -210,15 +213,15 @@
                                     <div class="col-md-8 col-lg-5">
                                         <select class="form-control" id="destinationCity">
                                             <option value="" selected disabled>Seleccionar</option>
-                                            <option value="1">Beni</option>
-                                            <option value="2">Chuquisaca</option>
-                                            <option value="3">Cochabamba</option>
-                                            <option value="4">La Paz</option>
-                                            <option value="5">Oruro</option>
-                                            <option value="6">Pando</option>
-                                            <option value="7">Potosi</option>
-                                            <option value="8">Santa Cruz</option>
-                                            <option value="9">Tarija</option>
+                                            <option value="Beni">Beni</option>
+                                            <option value="Chuquisaca">Chuquisaca</option>
+                                            <option value="Cochabamba">Cochabamba</option>
+                                            <option value="La Paz">La Paz</option>
+                                            <option value="Oruro">Oruro</option>
+                                            <option value="Pando">Pando</option>
+                                            <option value="Potosi">Potosi</option>
+                                            <option value="Santa Cruz">Santa Cruz</option>
+                                            <option value="Tarija">Tarija</option>
                                         </select>
                                     </div>
                                 </div>
@@ -227,11 +230,11 @@
                                         <label class="col-form-label">Tipo de camión</label>
                                     </div>
                                     <div class="col-md-8 col-lg-5">
-                                        <select class="form-control">
-                                            @foreach (TruckTypeModel truck in Model.trucksTypes)
+                                        <select class="form-control" asp-items="@(new SelectList(Model.trucksTypes,"id","type"))">
+                                            @*@foreach (var truck in Model.trucksTypes)
                                             {
-                                                <option value="@truck.id">@truck.tipo</option>
-                                            }
+                                                <option value="@truck.id">@truck.type</option>
+                                            }*@
                                         </select>
                                     </div>
                                 </div>
@@ -242,12 +245,12 @@
                                         <label class="col-form-label">Origen</label>
                                     </div>
                                     <div class="col-md-8 col-lg-5">
-                                        <select class="form-control">
-                                            <option value="" selected disabled>Seleccionar</option>
+                                        <select class="form-control" asp-items="@(new SelectList(Model.macroRoutes,"id","name"))">
+                                            @*<option value="" selected disabled>Seleccionar</option>
                                             @foreach (MacroRouteModel macroRoute in Model.macroRoutes)
                                             {
                                                 <option value="@macroRoute.id">@macroRoute.name</option>
-                                            }
+                                            }*@
                                         </select>
                                     </div>
                                 </div>
@@ -264,12 +267,12 @@
                                         <label class="col-form-label">Destino</label>
                                     </div>
                                     <div class="col-md-8 col-lg-5">
-                                        <select class="form-control">
-                                            <option value="" selected disabled>Seleccionar</option>
+                                        <select class="form-control" asp-items="@(new SelectList(Model.macroRoutes,"id","name"))">
+                                            @*<option value="" selected disabled>Seleccionar</option>
                                             @foreach (MacroRouteModel macroRoute in Model.macroRoutes)
                                             {
                                                 <option value="@macroRoute.id">@macroRoute.name</option>
-                                            }
+                                            }*@
                                         </select>
                                     </div>
                                 </div>
@@ -286,11 +289,11 @@
                                         <label class="co-form-label">Tipo de camión</label>
                                     </div>
                                     <div class="col-md-8 col-lg-5">
-                                        <select class="form-control">
-                                            @foreach (TruckTypeModel truck in Model.trucksTypes)
+                                        <select class="form-control" asp-items="@(new SelectList((IEnumerable<TruckTypeModel>)Model.trucksTypes,"id","type"))" required>
+                                            @*@foreach (TruckTypeModel truck in Model.trucksTypes)
                                             {
-                                                <option value="@truck.id">@truck.tipo</option>
-                                            }
+                                                <option value="@truck.id">@truck.type</option>
+                                            }*@
                                         </select>
                                     </div>
                                 </div>
@@ -397,15 +400,12 @@
                                         <font style="font-size: 12px;">&nbsp; &nbsp;Calle Teniente Walter Vega #360, Santa Cruz, Bolivia</font>
                                     </li>
                                     <li>
-                                        @{
-                                            string x = "@";
-                                        }
-                                        <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@x-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
+                                        <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@@-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
                                             <font style="font-size: 12px;">&nbsp;&nbsp; &nbsp;</font>
                                         </a>
                                         <font class="text-alpha" style="font-size: 12px;">
                                             <u>
-                                                <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@x-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip345366" target="_blank">Google Maps</a>
+                                                <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@@-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip345366" target="_blank">Google Maps</a>
                                             </u>
                                         </font>
                                         <br />

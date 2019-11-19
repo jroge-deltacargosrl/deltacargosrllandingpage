@@ -12,23 +12,39 @@ namespace DeltaCargoSRL.Controllers
 {
     public class CarrierController : Controller
     {
+        // aplicar el patron de diseño "Unit Of Work"
+        private readonly IRepositoryApi<CarrierModel> repositoryCarrier;
+        private readonly IRepositoryApi<TruckTypeModel> repositoryTruckType;
+        private readonly IRepositoryApi<MacroRouteModel> repositoryRoute;
 
-        private readonly IRepositoryCrud<CarrierModel> repositoryCarrier;
-
-        public CarrierController(IRepositoryCrud<CarrierModel> repositoryCarrier)
+        public CarrierController(IRepositoryApi<CarrierModel> repositoryCarrier, IRepositoryApi<TruckTypeModel> repositoryTruckType, IRepositoryApi<MacroRouteModel> repositoryRoute)
         {
             this.repositoryCarrier = repositoryCarrier;
-        }
-
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
+            this.repositoryTruckType = repositoryTruckType;
+            this.repositoryRoute = repositoryRoute;
         }
 
         public IActionResult Details()
         {
-             return View(deserializeJSON<CarrierModel>(TempData["newCarrier"].ToString()));
+            var newCarrier = deserializeJSON<CarrierModel>(TempData["newCarrier"].ToString());
+
+             return View(newCarrier);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            repositoryTruckType.setResource("truck/");
+            ViewData["truckTypes"] = repositoryTruckType.getAll();
+
+            repositoryRoute.setResource("route/");
+            //ViewData["routes"] = repositoryRoute.getAll();
+            // Refactorizar este modelo con un ViewModel
+            CarrierModel model = new CarrierModel
+            {
+                ids_Route = repositoryRoute.getAll().ToList()
+            };
+            return View(model);
         }
 
 
@@ -37,16 +53,28 @@ namespace DeltaCargoSRL.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(CarrierModel carrier)
         {
-            if (ModelState.IsValid)
+            bool actionSuccessfully = ModelState.IsValid;
+            if (actionSuccessfully)
             {
                 repositoryCarrier.setResource("carrier/");
-                CarrierModel newCarrier = repositoryCarrier.create(carrier);
-                TempData["newCarrier"] = serializeJSON(newCarrier);
-                return RedirectToAction(nameof(Details));
+                CarrierModel carrierCreated = repositoryCarrier.create(carrier);
+                
+                TempData["newCarrier"] = serializeJSON(carrierCreated);
+                
+                TempData["registerSuccessfully"] = true;
+                carrier = new CarrierModel
+                {
+                    ids_Route = repositoryRoute.getAll().ToList()
+                };
+                ModelState.Clear();
+                //return RedirectToAction(nameof(Details));
             }
-            return View();
+            // listar los datos necesarios para las relaciones de la clase Carrier
+            ViewData["truckTypes"] = repositoryTruckType.getAll();
+            return View(carrier);
             //return RedirectToAction("DetalleChofer",carrier); // modificar
         }
 

@@ -3,6 +3,11 @@
     color: #ec9404;
 }
 
+/* li selected*/
+span.selected {
+    color: #ec9404;
+}
+
 .s_share_facebook,
 .s_share_twitter,
 .s_share_linkedin,
