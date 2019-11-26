@@ -110,6 +110,7 @@
             <div id="wrap" class="oe_structure oe_empty">
                 <form asp-action="Create" asp-controller="Client" method="post">
                     <div class="container">
+                        <input asp-for="id_membership" />
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="row form-group form-field">
                             <div class="col-md-4 text-md-right">
@@ -210,16 +211,15 @@
                                     </div>
                                     <div class="col-md-8 col-lg-5">
                                         <select asp-for="routeCityOrigin" class="form-control o_website_form_input" id="originCity">
-                                            <option value="" selected disabled>Seleccionar</option>
-                                            <option value="Beni">Beni</option>
-                                            <option value="Chuquisaca">Chuquisaca</option>
+                                            <option value="SantaCruz">Santa Cruz</option>
+                                            <option value="LaPaz">La Paz</option>
                                             <option value="Cochabamba">Cochabamba</option>
-                                            <option value="La Paz">La Paz</option>
-                                            <option value="Oruro">Oruro</option>
-                                            <option value="Pando">Pando</option>
+                                            <option value="Sucre">Sucre</option>
+                                            <option value="El_Alto">El Alto</option>
                                             <option value="Potosi">Potosi</option>
-                                            <option value="Santa Cruz">Santa Cruz</option>
+                                            <option value="Oruro">Oruro</option>
                                             <option value="Tarija">Tarija</option>
+                                            <option value="Trinidad">Trinidad</option>
                                         </select>
                                     </div>
                                 </div>
@@ -229,16 +229,15 @@
                                     </div>
                                     <div class="col-md-8 col-lg-5">
                                         <select asp-for="routeCityDestination" class="form-control" id="destinationCity">
-                                            <option value="" selected disabled>Seleccionar</option>
-                                            <option value="Beni">Beni</option>
-                                            <option value="Chuquisaca">Chuquisaca</option>
+                                            <option value="SantaCruz">Santa Cruz</option>
+                                            <option value="LaPaz">La Paz</option>
                                             <option value="Cochabamba">Cochabamba</option>
-                                            <option value="La Paz">La Paz</option>
-                                            <option value="Oruro">Oruro</option>
-                                            <option value="Pando">Pando</option>
+                                            <option value="Sucre">Sucre</option>
+                                            <option value="El_Alto">El Alto</option>
                                             <option value="Potosi">Potosi</option>
-                                            <option value="Santa Cruz">Santa Cruz</option>
+                                            <option value="Oruro">Oruro</option>
                                             <option value="Tarija">Tarija</option>
+                                            <option value="Trinidad">Trinidad</option>
                                         </select>
                                     </div>
                                 </div>

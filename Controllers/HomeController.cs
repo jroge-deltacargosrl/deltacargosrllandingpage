@@ -31,7 +31,7 @@ namespace DeltaCargoSRL.Controllers
         public IActionResult Index()
         {
             // inicializar instancia 
-            initVarEnviroment(DevelopmentEnvironment.IISExpressServer);
+            initVarEnviroment(DevelopmentEnvironment.AzureServer);
 
             return View();
         }

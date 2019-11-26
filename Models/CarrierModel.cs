@@ -12,7 +12,7 @@ namespace DeltaCargoSRL.Models
     {
         [Required(ErrorMessage = "Campo Requerido")]
         [Range(0,int.MaxValue)]
-        [Display(Name = "Numero de Licencia", Prompt = "4512581")]
+        [Display(Name = "Numero de Licencia", Prompt = "Ej: 4512581")]
         public long nroLicense { get; set; }
 
         [Required(ErrorMessage = "Campo Requerido")]
@@ -20,19 +20,19 @@ namespace DeltaCargoSRL.Models
         public string fullname { get; set; }
 
         [Required(ErrorMessage = "Campo Requerido")]
-        [Display(Name = "Apellidos", Prompt = "Padilla")]
+        [Display(Name = "Apellidos", Prompt = "Ej: Padilla")]
         public string lastname { get; set; }
 
-        [Display(Name = "Empresa", Prompt = "Delta Transporte")]
+        [Display(Name = "Empresa", Prompt = "Ej: Delta Transporte")]
         public string company { get; set; }
 
         [Required(ErrorMessage = "Campo Requerido")]
         [DataType(DataType.PhoneNumber)]
-        [Display(Name = "Telefono", Prompt = "77350000")]
+        [Display(Name = "Telefono", Prompt = "Ej: 77350000")]
         public string phone { get; set; }
 
         [Required]
-        [Display(Name ="Correo Electrónico", Prompt = "victorpadilla@outlook.com")]
+        [Display(Name ="Correo Electrónico", Prompt = "Ej: victorpadilla@outlook.com")]
         public string email { get; set; }
 
         [Required]

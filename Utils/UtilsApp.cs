@@ -34,7 +34,7 @@ namespace DeltaCargoSRL.Utils
 
         public static bool isNull<T>(T obj) => obj == null;
 
-        public static string serializeJSON<T>(T valueObject) => JsonConvert.SerializeObject(valueObject);
+        public static string serializeJSON<T>(T value) => JsonConvert.SerializeObject(value);
 
         public static T deserializeJSON<T>(string jsonValue) => JsonConvert.DeserializeObject<T>(jsonValue);
 

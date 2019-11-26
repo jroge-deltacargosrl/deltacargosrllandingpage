@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -24,14 +25,14 @@ namespace DeltaCargoSRL.Models
         [Display(Name ="Origen")]
         public int? idMacroRouteOrigin { get; set; }
 
-        [Display(Name = "Ciudad", Prompt = "Santa Cruz")]
+        [Display(Name = "Ciudad", Prompt = "Ej: Santa Cruz")]
         public string routeCityOrigin { get; set; }  // no habilitadas para st: transporte nacional
 
         //public RouteDTO macroRouteDestination { get; set; }
         [DisplayName("Destino")]
         public int? idMacroRouteDestination { get; set; }
 
-        [Display(Name ="Ciudad", Prompt = "La Paz")]
+        [Display(Name ="Ciudad", Prompt = "Ej: La Paz")]
         public string routeCityDestination { get; set; } // no habilitada para st: transporte nacional
         
         //public TruckTypeDTO truckType { get; set; } // no habilitadas para clientes no registradas
@@ -39,53 +40,57 @@ namespace DeltaCargoSRL.Models
         public int? idTruckType { get; set; }
 
         // para todos st (Excepto el almacenamiento de carga)
-        [Display(Name = "Peso", Prompt = "200.34")]
+        [Display(Name = "Peso", Prompt = "Ej: 22.0")]
         public decimal? loadWeight { get; set; }
         
         //public UnitMeasurementDTO umLoadWeight { get; set; }
         public int? idUmLoadWeight { get; set; }
 
-        [Display(Name = "Volumen", Prompt = "200")]
+        [Display(Name = "Volumen", Prompt = "Ej: 60.0")]
         public decimal? loadVolume { get; set; }
         //public UnitMeasurementDTO umLoadVolume { get; set; }
         public int? idUmLoadVolume { get; set; }
         public bool? imo { get; set; } // solo para cotizaciones de clientes antiguos
 
         // st: almacen de carga
-        [Display(Name = "Capacidad de Almacenamiento", Prompt = "150.5")]
+        [Display(Name = "Capacidad de Almacenamiento", Prompt = "Ej: 150.5")]
         public decimal? storageCapacity { get; set; }
         //public UnitMeasurementDTO umStorageCapacity { get; set; }
         public int? idUmStorageCapacity { get; set; }
 
-        [Display(Name = "Tiempo de almacenamiento", Prompt = "5")]
+        [Display(Name = "Tiempo de almacenamiento", Prompt = "Ej: 5")]
         public decimal? storageTime { get; set; }
         //public UnitMeasurementDTO umStorageTime { get; set; }
         public int? idUmStorageTime { get; set; }
 
         // para todos los tipos de servicio
-        [Display(Name = "Coméntanos", Prompt = "Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana...")]
+        [Display(Name = "Coméntanos", Prompt = "Ej: Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana...")]
         public string comment { get; set; }
+
+        // valor por defecto: Afiliacion -> Delta Cargo SRL
+        [HiddenInput(DisplayValue = false)]
+        public int id_membership { get; set; } = 1;
         #endregion
 
         #region "Fields Model CRM.Leads"
         [Required(ErrorMessage = "Campo Requerido")]
-        [Display(Name ="Nombre Completo", Prompt = "Roberto Peréz")]
+        [Display(Name ="Nombre Completo", Prompt = "Ej: Roberto Pérez")]
         public string name { get; set; }
         
         [Required(ErrorMessage = "Campo Requerido")]
-        [Display(Name = "Empresa", Prompt = "Delta Cargo SRL")]
+        [Display(Name = "Empresa", Prompt = "Ej: Delta Cargo SRL")]
         public string company_name { get; set; }
         
-        [Display(Name = "Correo Electrónico", Prompt = "roberto.perez@gmail.com")]
+        [Display(Name = "Correo Electrónico", Prompt = "Ej: roberto.perez@gmail.com")]
         public string email_from { get; set; }
 
         [Required(ErrorMessage = "Campo Requerido")]
-        [Display(Name = "Celular", Prompt = "78055825")]
+        [Display(Name = "Celular", Prompt = "Ej: 78055825")]
         public string phone { get; set; }
         // city and country reusability of previus model
 
         // st: Ruta Urbana SCZ
-        [Display(Name = "Dirección", Prompt = "Av. Tte Vega, Barrio Libertad, Calle 1")]
+        [Display(Name = "Dirección", Prompt = "Ej: Av. Tte Vega, Barrio Libertad, Calle 1")]
         public string street { get; set; }
 
         public string kanban_state { get; set; }

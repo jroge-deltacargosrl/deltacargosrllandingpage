@@ -52,7 +52,7 @@ namespace DeltaCargoSRL.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(QuotationModel model)
+        public IActionResult Create(QuotationModel quotation)
         {
             bool actionSuccessfully = ModelState.IsValid;
             if (actionSuccessfully)
@@ -60,18 +60,18 @@ namespace DeltaCargoSRL.Controllers
                 // pre: register client
                 clientRepository.setResource("client/");
                 // metodo utilitario 
-                var clientModel = getClientFromQuotation(model);
+                var clientModel = getClientFromQuotation(quotation);
                 var clientCreated = clientRepository.create(clientModel);
                 // asignar el ID del nuevo objeto creado
-                model.idContact = clientCreated.id;
+                quotation.idContact = clientCreated.id;
                 // call method api
                 quotationRepository.setResource("quotation/");
-                var quotationCreated = quotationRepository.create(model);
+                var quotationCreated = quotationRepository.create(quotation);
                 
                 // Mandar un mensaje de registro satisfactorio
                 TempData["registerSuccessfully"] = true;
                 
-                model = new QuotationModel();
+                quotation = new QuotationModel();
                 ModelState.Clear();
                 // redirect method
                 //return RedirectToAction(actionName: "Index", controllerName: "Home");
@@ -79,7 +79,7 @@ namespace DeltaCargoSRL.Controllers
             TempData["quotationViewModel"] = serializeJSON(quotationViewModelRepository.get());
             
             
-            return View(model);
+            return View(quotation);
         } 
 
 
