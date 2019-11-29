@@ -1,4 +1,5 @@
-﻿@{
+﻿@model DeltaCargoSRL.Models.UserModel;
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -56,7 +57,7 @@
 <body>
 
     @{
-        
+
     }
     <div id="wrapwrap" class="homepage">
         <header class=" o_affix_enabled">
@@ -82,9 +83,9 @@
                                     <span class="">Contáctanos</span>
                                 </a>
                             </li>
-                            <li class="nav-item divider" ></li>
+                            <li class="nav-item divider"></li>
                             <li class="nav-item">
-                                <a role="menuitem" class="nav-link" href="http://deltacargoportal.azurewebsites.net" target="_blank">
+                                <a role="menuitem" class="nav-link" data-toggle="modal" data-target="#modalLoginForm" target="_blank">
                                     <span class="">
                                         <b>Iniciar sesión</b>
                                     </span>
@@ -92,8 +93,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    
                 </div>
             </nav>
         </header>
@@ -113,7 +112,7 @@
                                 </p>
                                 <div class="col-lg-12 pb16 pt0 s_btn text-center" data-name="Buttons">
                                     @*<a href="@Url.Action("Chofer","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
-        <a href="@Url.Action("Cliente","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>*@
+                                        <a href="@Url.Action("Cliente","Home")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>*@
                                     <a href="@Url.Action("Create","Carrier")" class="btn btn-delta rounded-circle rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip33140"><b><font class="text-alpha" style="">Soy Transportista</font></b></a>&nbsp;
                                     <a href="@Url.Action("Create","Client")" class="btn btn-delta rounded-circle rounded-circle rounded-circle" data-original-title="" title="" aria-describedby="tooltip421564"><b><font class="text-alpha" style="" data-original-title="" title="" aria-describedby="tooltip635730">Soy Cliente</font></b></a>
 
@@ -198,7 +197,7 @@
                                         <font style="font-size: 12px;">&nbsp; &nbsp;Calle Teniente Walter Vega #360, Santa Cruz, Bolivia</font>
                                     </li>
                                     <li>
-                                      
+
                                         <a href="https://www.google.com/maps/place/Delta+Cargo+Srl/@@-17.7919289,-63.16856,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e867b5f98089:0x95a45c3d57cd620f!8m2!3d-17.7919289!4d-63.1663713" data-original-title="" title="" aria-describedby="tooltip715422">
                                             <font style="font-size: 12px;">&nbsp;&nbsp; &nbsp;</font>
                                         </a>
@@ -250,6 +249,47 @@
     </div>
     <script data-cfasync="false" src="~/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script type="text/javascript" src="~/js/site.js"></script>
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="headLogin" class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesión</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form asp-controller="https://deltacargoportal.azurewebsites.net/Operations" asp-action="Index" method="post">
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input class="form-control validate"
+                                   asp-for="email"
+                                   id="Username"
+                                   type="text"
+                                   autocomplete="off"
+                                   value=""
+                                   placeholder="Usuario"
+                                   name="email">
+                            <label id="label-control" data-error="inválido" data-success="valido" for="defaultForm-email">Correo Electrónico</label>
+                        </div>
 
+                        <div class="md-form mb-4">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input type="password"
+                                   class="form-control validate"
+                                   asp-for="password"
+                                   autocomplete="off"
+                                   placeholder="Contraseña"
+                                   name="password">
+                            <label data-error="password inválido" data-success="aceptada" for="defaultForm-pass">Contraseña</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit"id="submitLogin" class="btn btn-default">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
